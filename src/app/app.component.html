@@ -1,0 +1,40 @@
+<h1>{{title}}</h1> 
+<br>
+<label for="sid">Student Id:</label>
+<br>
+<input type="text" id =" sid " name= "sid" [(ngModel)]="studentid"> <br>
+
+<br>
+<label for="sname">Student Name:</label>
+<br>
+<input type="text" id =" sname " name= "sname" [(ngModel)]="name"> <br>
+
+<br>
+<label for="sdepartment">Department:</label>
+<br>
+<input type="text" id =" sdepartment " name= "separtment" [(ngModel)]="department"> <br>
+
+<br>
+<label for="scgpa">Cgpa:</label>
+<br>
+<input type="text" id =" scgpa " name= "sid" [(ngModel)]="cgpa">
+<br>
+<br>
+<button (click)="submit();">SHOW STUDENT</button>
+<br>
+<br>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>department</th>
+        <th>cgpa</th>
+    </tr>
+
+    <tr *ngFor="let s of showstudent">
+        <td>{{s.studentid}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.department}}</td>
+        <td>{{s.cgpa}}</td>
+    </tr>
+</table>
